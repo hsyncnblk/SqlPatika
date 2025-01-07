@@ -1,0 +1,110 @@
+-- 1. Employee Tablosunun Oluşturulması:
+CREATE TABLE employee (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(50),
+    birthday DATE,
+    email VARCHAR(100)
+);
+
+--2 Employee Tablosuna 50 Veri Ekleme
+INSERT INTO employee (name, birthday, email)
+VALUES
+('John Doe', '1990-05-15', 'john.doe@example.com'),
+('Jane Smith', '1985-08-25', 'jane.smith@example.com'),
+('Alice Johnson', '1992-12-01', 'alice.johnson@example.com'),
+('David Williams', '1980-03-10', 'david.williams@example.com'),
+('Michael Brown', '1987-07-12', 'michael.brown@example.com'),
+('Emily Davis', '1993-11-22', 'emily.davis@example.com'),
+('Chris Taylor', '1982-09-30', 'chris.taylor@example.com'),
+('Olivia Wilson', '1995-04-17', 'olivia.wilson@example.com'),
+('Liam Moore', '1991-02-19', 'liam.moore@example.com'),
+('Sophia Martin', '1988-06-28', 'sophia.martin@example.com'),
+('Daniel Lee', '1994-01-07', 'daniel.lee@example.com'),
+('Isabella Clark', '1996-03-25', 'isabella.clark@example.com'),
+('Ethan Young', '1984-08-13', 'ethan.young@example.com'),
+('Madison Allen', '1992-07-09', 'madison.allen@example.com'),
+('James King', '1990-10-22', 'james.king@example.com'),
+('Charlotte Scott', '1995-05-03', 'charlotte.scott@example.com'),
+('Aiden Harris', '1993-02-11', 'aiden.harris@example.com'),
+('Amelia Lewis', '1989-11-04', 'amelia.lewis@example.com'),
+('Mason Walker', '1991-08-19', 'mason.walker@example.com'),
+('Harper Robinson', '1994-09-25', 'harper.robinson@example.com'),
+('Jackson Carter', '1990-06-12', 'jackson.carter@example.com'),
+('Ella Evans', '1997-01-29', 'ella.evans@example.com'),
+('Samuel Perez', '1985-12-17', 'samuel.perez@example.com'),
+('Aria Green', '1992-05-23', 'aria.green@example.com'),
+('David Adams', '1991-04-14', 'david.adams@example.com'),
+('Lucas Nelson', '1988-08-02', 'lucas.nelson@example.com'),
+('Zoe Mitchell', '1993-10-30', 'zoe.mitchell@example.com'),
+('Gabriel Carter', '1995-06-19', 'gabriel.carter@example.com'),
+('Chloe Roberts', '1990-03-08', 'chloe.roberts@example.com'),
+('Benjamin Turner', '1986-07-15', 'benjamin.turner@example.com'),
+('Lily Phillips', '1994-12-06', 'lily.phillips@example.com'),
+('Wyatt Moore', '1991-01-09', 'wyatt.moore@example.com'),
+('Harley Brooks', '1993-11-18', 'harley.brooks@example.com'),
+('Elijah Wright', '1992-05-28', 'elijah.wright@example.com'),
+('Evelyn Kelly', '1990-07-24', 'evelyn.kelly@example.com'),
+('Isaiah Morris', '1994-03-12', 'isaiah.morris@example.com'),
+('Victoria Rivera', '1995-02-22', 'victoria.rivera@example.com'),
+('Eli James', '1987-12-19', 'eli.james@example.com'),
+('Scarlett Bennett', '1991-09-07', 'scarlett.bennett@example.com'),
+('Sebastian Murphy', '1988-05-04', 'sebastian.murphy@example.com'),
+('Victoria Watson', '1992-10-21', 'victoria.watson@example.com'),
+('Maya Simmons', '1994-06-18', 'maya.simmons@example.com'),
+('Matthew Foster', '1993-04-29', 'matthew.foster@example.com'),
+('Joshua Grant', '1990-02-06', 'joshua.grant@example.com'),
+('Ava Collins', '1995-08-23', 'ava.collins@example.com'),
+('Levi Ramirez', '1989-12-14', 'levi.ramirez@example.com'),
+('Katherine Gomez', '1993-01-25', 'katherine.gomez@example.com'),
+('Ella Howard', '1994-07-02', 'ella.howard@example.com'),
+('Alexander Watson', '1990-11-09', 'alexander.watson@example.com'),
+('Sophie Evans', '1996-04-19', 'sophie.evans@example.com'),
+('Avery Hughes', '1988-02-26', 'avery.hughes@example.com');
+
+
+-- 3. Sütunların Her Birine Göre Diğer Sütunları Güncelleyen 5 Adet UPDATE İşlemi:
+-- 1. name sütununa göre birthday güncelleme
+UPDATE employee
+SET birthday = '1995-06-20'
+WHERE name = 'John Doe';
+
+-- 2. email sütununa göre name güncelleme
+UPDATE employee
+SET name = 'Samuel Green'
+WHERE email = 'jane.smith@example.com';
+
+-- 3. birthday sütununa göre email güncelleme
+UPDATE employee
+SET email = 'alice.newemail@example.com'
+WHERE birthday = '1992-12-01';
+
+-- 4. id sütununa göre name güncelleme
+UPDATE employee
+SET name = 'Michael Brown'
+WHERE id = 5;
+
+-- 5. name sütununa göre birthday güncelleme
+UPDATE employee
+SET birthday = '1991-07-30'
+WHERE name = 'David Williams';
+
+-- 4. Sütunların Her Birine Göre İlgili Satırı Silecek 5 Adet DELETE İşlemi:
+-- 1. name sütununa göre satır silme
+DELETE FROM employee
+WHERE name = 'John Doe';
+
+-- 2. email sütununa göre satır silme
+DELETE FROM employee
+WHERE email = 'jane.smith@example.com';
+
+-- 3. birthday sütununa göre satır silme
+DELETE FROM employee
+WHERE birthday = '1992-12-01';
+
+-- 4. id sütununa göre satır silme
+DELETE FROM employee
+WHERE id = 5;
+
+-- 5. name sütununa göre satır silme
+DELETE FROM employee
+WHERE name = 'David Williams';
