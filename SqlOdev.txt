@@ -1,0 +1,115 @@
+
+//employee  tablosunu oluşturuyoruz.
+
+CREATE TABLE employee (
+    id INTEGER PRIMARY KEY,
+    name VARCHAR(50),
+    birthday DATE,
+    email VARCHAR(100)
+);
+
+
+// Mackaroo ile veri ekliyoruz 
+
+INSERT INTO employee (id, name, birthday, email) VALUES
+(1, 'John Doe', '1980-02-10', 'john.doe@example.com'),
+(2, 'Jane Smith', '1992-04-22', 'jane.smith@example.com'),
+(3, 'Bill Gates', '1955-10-28', 'bill.gates@example.com'),
+(4, 'Elon Musk', '1971-06-28', 'elon.musk@example.com'),
+(5, 'Mark Zuckerberg', '1984-05-14', 'mark.zuckerberg@example.com'),
+(6, 'Sundar Pichai', '1972-06-10', 'sundar.pichai@example.com'),
+(7, 'Satya Nadella', '1967-08-19', 'satya.nadella@example.com'),
+(8, 'Tim Cook', '1960-11-01', 'tim.cook@example.com'),
+(9, 'Jeff Bezos', '1964-01-12', 'jeff.bezos@example.com'),
+(10, 'Larry Page', '1973-03-26', 'larry.page@example.com'),
+(11, 'Sergey Brin', '1973-08-21', 'sergey.brin@example.com'),
+(12, 'Sheryl Sandberg', '1969-08-28', 'sheryl.sandberg@example.com'),
+(13, 'Susan Wojcicki', '1968-07-05', 'susan.wojcicki@example.com'),
+(14, 'Reed Hastings', '1960-10-08', 'reed.hastings@example.com'),
+(15, 'Marissa Mayer', '1975-05-30', 'marissa.mayer@example.com'),
+(16, 'Evan Spiegel', '1990-06-04', 'evan.spiegel@example.com'),
+(17, 'Brian Chesky', '1981-08-29', 'brian.chesky@example.com'),
+(18, 'Travis Kalanick', '1976-08-06', 'travis.kalanick@example.com'),
+(19, 'Jack Dorsey', '1976-11-19', 'jack.dorsey@example.com'),
+(20, 'Biz Stone', '1974-03-10', 'biz.stone@example.com'),
+(21, 'Evan Williams', '1972-03-15', 'evan.williams@example.com'),
+(22, 'Kevin Systrom', '1983-12-30', 'kevin.systrom@example.com'),
+(23, 'Mike Krieger', '1986-03-12', 'mike.krieger@example.com'),
+(24, 'Cathy Engelbert', '1964-01-04', 'cathy.engelbert@example.com'),
+(25, 'Mary Barra', '1961-12-24', 'mary.barra@example.com'),
+(26, 'Indra Nooyi', '1955-10-28', 'indra.nooyi@example.com'),
+(27, 'Marillyn Hewson', '1953-12-27', 'marillyn.hewson@example.com'),
+(28, 'Anne Wojcicki', '1973-07-28', 'anne.wojcicki@example.com'),
+(29, 'Ginni Rometty', '1957-07-29', 'ginni.rometty@example.com'),
+(30, 'Meg Whitman', '1956-08-04', 'meg.whitman@example.com'),
+(31, 'Howard Schultz', '1953-07-19', 'howard.schultz@example.com'),
+(32, 'Richard Branson', '1950-07-18', 'richard.branson@example.com'),
+(33, 'Oprah Winfrey', '1954-01-29', 'oprah.winfrey@example.com'),
+(34, 'Warren Buffett', '1930-08-30', 'warren.buffett@example.com'),
+(35, 'Larry Ellison', '1944-08-17', 'larry.ellison@example.com'),
+(36, 'Steve Jobs', '1955-02-24', 'steve.jobs@example.com'),
+(37, 'Bill Clinton', '1946-08-19', 'bill.clinton@example.com'),
+(38, 'George W. Bush', '1946-07-06', 'george.bush@example.com'),
+(39, 'Barack Obama', '1961-08-04', 'barack.obama@example.com'),
+(40, 'Hillary Clinton', '1947-10-26', 'hillary.clinton@example.com'),
+(41, 'Joe Biden', '1942-11-20', 'joe.biden@example.com'),
+(42, 'Kamala Harris', '1964-10-20', 'kamala.harris@example.com'),
+(43, 'Bernie Sanders', '1941-09-08', 'bernie.sanders@example.com'),
+(44, 'Elizabeth Warren', '1949-06-22', 'elizabeth.warren@example.com'),
+(45, 'Michael Bloomberg', '1942-02-14', 'michael.bloomberg@example.com'),
+(46, 'Ted Cruz', '1970-12-22', 'ted.cruz@example.com'),
+(47, 'Rand Paul', '1963-01-07', 'rand.paul@example.com'),
+(48, 'Marco Rubio', '1971-05-28', 'marco.rubio@example.com'),
+(49, 'Cory Booker', '1969-04-27', 'cory.booker@example.com'),
+(50, 'Charlie Brown', '1990-08-13', 'charlie.brown@example.com');
+
+
+
+// 5 tane Güncelleme işlemi
+
+UPDATE employee
+SET name = 'Johnathan Doe', email = 'johnathan.doe@example.com'
+WHERE id = 1;
+
+
+UPDATE employee
+SET birthday = '1990-07-15', email = 'jane.smith.new@example.com'
+WHERE name = 'Jane Smith';
+
+
+UPDATE employee
+SET name = 'Elon Musk Jr.', email = 'elon.musk.jr@example.com'
+WHERE birthday = '1971-06-28';
+
+
+UPDATE employee
+SET name = 'Bill Gates Senior', birthday = '1955-10-28'
+WHERE email = 'bill.gates@example.com';
+
+
+UPDATE employee
+SET birthday = '1992-05-14', name = 'Mark Zuckerberg II'
+WHERE id = 5;
+
+
+// 5 tane Silme işlemi
+
+DELETE FROM employee
+WHERE id = 1;
+
+
+DELETE FROM employee
+WHERE name = 'Jane Smith';
+
+
+DELETE FROM employee
+WHERE birthday = '1971-06-28';
+
+
+DELETE FROM employee
+WHERE email = 'bill.gates@example.com';
+
+
+DELETE FROM employee
+WHERE name = 'Mark Zuckerberg';
+
